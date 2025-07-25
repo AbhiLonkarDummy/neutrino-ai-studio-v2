@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Paperclip, Mic, Send } from "lucide-react";
-import usecaseDataById from "../components/section/usecases/usecaseDatabyId";
+import usecaseDataById from "../components/section/usecases/usecaseDataById";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
