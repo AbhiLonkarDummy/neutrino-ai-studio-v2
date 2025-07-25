@@ -68,18 +68,27 @@ const UsecaseDetails = () => {
     <>
       {/* Top bar */}
       <div className="border-b border-gray-700">
-        <div className="max-w-[1140px] px-2.5 flex items-center justify-between mx-auto py-3">
-          <a href="/" className="w-36 h-4 flex items-center ml-2">
-            <img
-              src={neutrinologo}
-              alt="Neutrino Logo"
-              className="w-full h-auto block"
-            />
-          </a>
-          <h4>{usecase.title}</h4>
-          <Link to="/">
-            <Button className="btn primary-btn">Back to home</Button>
-          </Link>
+        <div className="max-w-[1140px] px-4 mx-auto py-3">
+          <div className="flex flex-row items-center justify-between gap-4 flex-wrap sm:flex-nowrap">
+            {/* Logo */}
+            <a href="/" className="w-28 sm:w-36 flex items-center">
+              <img
+                src={neutrinologo}
+                alt="Neutrino Logo"
+                className="w-full h-auto block"
+              />
+            </a>
+
+            {/* Spacer for centering or expanding */}
+            <div className="flex-1" />
+
+            {/* Button */}
+            <Link to="/">
+              <Button className="btn primary-btn px-3 py-1.5 text-sm sm:text-base sm:px-4 sm:py-2 whitespace-nowrap">
+                Back to home
+              </Button>
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -106,29 +115,32 @@ const UsecaseDetails = () => {
         </div>
 
         {/* Problem & Solution */}
+        {/* Problem & Solution */}
         <div
-          className="grid grid-cols-2 gap-6 mb-18 relative text-center w-[1140px] px-[10px]"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-18 relative text-center w-full"
           ref={(el) => (sectionsRef.current[1] = el)}
         >
-          <div className="pr-6">
+          <div className="md:pr-6">
             <h2 className="text-center mb-2">
               The <span className="italic">Problem</span>
             </h2>
             <p>{usecase.problem}</p>
           </div>
-          <div className="pl-6">
+          <div className="md:pl-6">
             <h2 className="text-center mb-2">
               Our <span className="italic">Solution</span>
             </h2>
             <p>{usecase.solution}</p>
           </div>
-          <div className="absolute top-0 bottom-0 left-1/2 w-px bg-gray-300" />
+
+          {/* Divider for desktop only */}
+          <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-gray-300" />
         </div>
 
         {/* Benefits */}
         <div className="mb-18" ref={(el) => (sectionsRef.current[2] = el)}>
           <h2 className="text-center text-2xl mb-8">Key Benefits</h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
             {usecase.benefits.map((benefit, index) => (
               <ProcessCard
                 key={index}
@@ -143,7 +155,7 @@ const UsecaseDetails = () => {
         {/* Testimonials */}
         <div className="mb-10" ref={(el) => (sectionsRef.current[3] = el)}>
           <h2 className="mb-10">Testimonials</h2>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-items-center">
             {usecase.testimonials.map((t, i) => (
               <TestimonialCard
                 key={i}

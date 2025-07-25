@@ -86,16 +86,26 @@ const Process = () => {
   }, []);
 
   return (
-    <section id="process" className="py-11 flex flex-col items-center justify-center gap-[20px]">
+    <section
+      id="process"
+      className="py-11 flex flex-col items-center justify-center gap-[20px]"
+    >
       <Label name="Process" />
       <div className="flex flex-col gap-4">
-        <h2 ref={headingRef} className="max-w-[680px] text-center opacity-0 translate-y-10">
+        <h2
+          ref={headingRef}
+          className="max-w-[680px] text-center opacity-0 translate-y-10"
+        >
           Our simple 3-step process to <span className="italic">skyrocket</span>{" "}
           your business.
         </h2>
-        <p ref={subRef} className="max-w-[720px] text-center opacity-0 translate-y-10 text-gray-600">
+        <p
+          ref={subRef}
+          className="max-w-[90%] sm:max-w-[720px] text-center opacity-0 translate-y-10 text-gray-600 mx-auto"
+        >
           From intelligent automation to AI-driven insights, Neutrino AI covers
-          every aspect of business transformation—efficient, smart, and scalable.
+          every aspect of business transformation—efficient, smart, and
+          scalable.
         </p>
       </div>
       <div className="flex flex-wrap justify-center gap-[20px] mt-8">
@@ -114,4 +124,3 @@ const Process = () => {
 };
 
 export default Process;
-

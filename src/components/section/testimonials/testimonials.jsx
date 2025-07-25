@@ -86,7 +86,6 @@ const Testimonials = () => {
       }
     );
 
-
     const cards = gsap.utils.toArray(".testimonial-animate");
 
     gsap.set(cards, { opacity: 0, y: 50 });
@@ -115,7 +114,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-11">
       <div className="flex flex-col items-center justify-center gap-[20px] mb-10">
         <Label name="Testimonials" />
-        <h2 ref={headingRef}className="max-w-[680px] text-center">
+        <h2 ref={headingRef} className="max-w-[680px] text-center">
           There's a reason <span className="italic">people</span> are{" "}
           <span className="italic">raving</span> about us.
         </h2>
@@ -123,10 +122,13 @@ const Testimonials = () => {
 
       <div
         ref={cardsWrapperRef}
-        className="max-w-[1140px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px]"
+        className="max-w-[1140px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[20px] place-items-center sm:place-items-stretch"
       >
         {testimonials.map((t, i) => (
-          <div key={i} className="testimonial-animate h-full">
+          <div
+            key={i}
+            className="testimonial-animate h-full w-full max-w-[360px]"
+          >
             <TestimonialCard
               text={t.text}
               name={t.name}

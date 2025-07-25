@@ -69,7 +69,7 @@ const Usecases = () => {
 
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <div className="flex justify-center items-center" ref={tabsRef}>
-          <TabsList className="inline-flex p-0 h-auto bg-[var(--tabs-background-color)] gap-1">
+          <TabsList className="flex flex-wrap md:flex-nowrap justify-center p-0 h-auto bg-[var(--tabs-background-color)] gap-1">
             {useCaseData.map((tab) => (
               <TabsTrigger
                 key={tab.value}
@@ -87,11 +87,11 @@ const Usecases = () => {
         {useCaseData.map((tab) => (
           <TabsContent key={tab.value} value={tab.value} className="pt-6">
             <div
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 place-items-center sm:place-items-stretch"
               ref={cardsWrapperRef}
             >
               {tab.cards.map((card, idx) => (
-                <div key={idx} className="usecase-card">
+                <div key={idx} className="usecase-card w-full max-w-[360px]">
                   <UseCaseCard
                     title={card.title}
                     description={card.description}

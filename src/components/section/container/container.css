@@ -6,3 +6,10 @@
   padding-right: 10px;
   padding-top: 0;
 }
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

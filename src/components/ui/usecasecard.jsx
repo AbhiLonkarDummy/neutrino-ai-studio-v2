@@ -5,7 +5,7 @@ const UseCaseCard = ({ title, description, id, imageUrl, link }) => {
   const navigate = useNavigate();
   return (
     <div
-      className="w-[360px] p-4 rounded-lg"
+      className="usecase-card w-[360px] p-4 rounded-lg"
       style={{ backgroundColor: "var(--testimonial-card-background)" }}
     >
       <div className="flex flex-col gap-4">

@@ -379,3 +379,49 @@ p {
 .text-box {
   color: var(--text-primary-color) !important;
 }
+
+/* Media queries start from here */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 54px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  #usecases {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #testimonials {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #about {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  #faq {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  #process {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}

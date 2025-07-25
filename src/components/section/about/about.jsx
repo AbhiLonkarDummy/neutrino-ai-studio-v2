@@ -63,11 +63,12 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-11 flex flex-col items-center justify-center gap-[20px]"
+      className="py-11 px-[10px] flex flex-col items-center justify-center gap-[20px]"
     >
       <Label name="About" />
-      <div className="flex flex-col gap-10">
-        <div className="about-heading text-center px-4">
+
+      <div className="flex flex-col gap-10 w-full max-w-[1140px] mx-auto">
+        <div className="about-heading text-center">
           <div className="flex flex-col gap-4 mb-8">
             <h2 ref={headingRef}>
               Meet the <span className="italic">incredible</span> team.
@@ -78,6 +79,7 @@ const About = () => {
               solution we deliver.
             </p>
           </div>
+
           <div ref={buttonWrapperRef}>
             <Button className="primary-btn btn">
               Book a 15 min call <ArrowRight className="ml-0.5 w-4 h-4" />
