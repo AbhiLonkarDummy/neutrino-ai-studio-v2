@@ -111,7 +111,7 @@ function Hero() {
       {/* AvatarStack with gradient glow below */}
       <div
         ref={avatarRef}
-        className="relative mt-8 flex items-center justify-center"
+        className="relative mt-2 flex items-center justify-center"
       >
         {/* Glowing conic gradient behind avatars */}
         <motion.div

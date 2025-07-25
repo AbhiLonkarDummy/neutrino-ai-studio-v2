@@ -5,7 +5,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 
 import TestimonialCard from "../components/ui/testimonialcard";
-import usecaseDataById from "../components/section/usecases/usecaseDatabyId";
+import usecaseDataById from "../components/section/usecases/usecaseDataById.js";
 import neutrinologo from "/neutrinologo.png";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
